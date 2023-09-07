@@ -40,20 +40,17 @@ class Solution {
                 checkO = true;
             }
         }
-        
+        //O,X개수 체크
         for(int i = 0; i < board.length; i ++){
             for(int k = 0; k < board[i].length(); k ++){
                 if(board[i].charAt(k) == 'O'){
                     o += 1;
                 }else if(board[i].charAt(k) == 'X'){
                     x += 1;
-                }else {
-                    dot += 1;
                 }
             }
-            
         }
-        
+        //정상적인 게임 외엔 다 비정상게임 처리
         if( o-x == 0 ){
             if( checkX == true && checkO == false ){
                 answer = 1;
@@ -73,10 +70,7 @@ class Solution {
         }else{
             answer = 0;
         }
-        
-        
-        
-        
+
         return answer;
     }
 }
